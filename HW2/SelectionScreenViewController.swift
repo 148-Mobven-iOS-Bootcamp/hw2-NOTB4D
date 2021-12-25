@@ -12,21 +12,27 @@ protocol baseViewControllerDelegete {
 class SelectionScreenViewController: UIViewController{
     
     var SelectionDelegate : baseViewControllerDelegete!
-
+    
+    var makeMovieName = {(name : String) -> (String) in
+        var name = name
+        return name
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     @IBAction func duneButtonTapped(_ sender: UIButton) {
         let name = Notification.Name(rawValue: darkNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
-        SelectionDelegate.didTapChoice(name: "Dune")
+        let movieName = makeMovieName("Dune")
+        SelectionDelegate.didTapChoice(name: movieName)
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction func witcherButtonTapped(_ sender: UIButton) {
         let name = Notification.Name(rawValue: lightNotificationKey)
         NotificationCenter.default.post(name: name, object: nil)
-        SelectionDelegate.didTapChoice(name: "Witcher")
+        let movieName = makeMovieName("Witcher")
+        SelectionDelegate.didTapChoice(name: movieName)
         dismiss(animated: true, completion: nil)
     }
 }
