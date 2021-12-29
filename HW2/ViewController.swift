@@ -15,9 +15,9 @@ let darkNotificationKey = "darkSide"
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var ChooseButton: UIButton!
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak private var chooseButton: UIButton!
+    @IBOutlet weak private var mainImageView: UIImageView!
+    @IBOutlet weak private var nameLabel: UILabel!
     
     // notification namlerini atama
     let light = Notification.Name(rawValue: lightNotificationKey)
@@ -30,15 +30,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       createObservers()
+        createObservers()
         
     }
     
     @IBAction func chooseButtonTapped(_ sender: Any) {
-        let selectionVC = storyboard?.instantiateViewController(withIdentifier: "SelectionScreenViewController") as!
+        let selectionVC = storyboard?.instantiateViewController(
+            withIdentifier: "SelectionScreenViewController") as!
         SelectionScreenViewController
         // delegate ile filmim adını alıp Label'a yazdırıyoruz
-        selectionVC.SelectionDelegate = self
+        selectionVC.selectionDelegate = self
         present(selectionVC, animated: true, completion: nil)
     }
     
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
 
 }
  
-extension ViewController : baseViewControllerDelegete{
+extension ViewController : BaseViewControllerDelegete{
     func didTapChoice(name: String){
         nameLabel.text = name
     }

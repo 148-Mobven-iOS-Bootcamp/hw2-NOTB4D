@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rz-Hj-2Kz">
                                 <rect key="frame" x="87" y="83" width="250" height="300"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4A-N5-ZDE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4A-N5-ZDE" userLabel="choose Button">
                                 <rect key="frame" x="156.5" y="723" width="101" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JsK-py-hIC"/>

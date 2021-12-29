@@ -6,12 +6,14 @@
 //
 
 import UIKit
-protocol baseViewControllerDelegete {
+
+protocol BaseViewControllerDelegete: AnyObject {
     func didTapChoice(name: String)
 }
+
 class SelectionScreenViewController: UIViewController{
     
-    var SelectionDelegate : baseViewControllerDelegete!
+    weak var selectionDelegate : BaseViewControllerDelegete?
     
     var makeMovieName = {(name : String) -> (String) in
         var name = name
@@ -22,17 +24,17 @@ class SelectionScreenViewController: UIViewController{
     }
     @IBAction func duneButtonTapped(_ sender: UIButton) {
         let name = Notification.Name(rawValue: darkNotificationKey)
-        NotificationCenter.default.post(name: name, object: nil)
+                    NotificationCenter.default.post(name: name, object: nil)
         let movieName = makeMovieName("Dune")
-        SelectionDelegate.didTapChoice(name: movieName)
+                    selectionDelegate?.didTapChoice(name: movieName)
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction func witcherButtonTapped(_ sender: UIButton) {
         let name = Notification.Name(rawValue: lightNotificationKey)
-        NotificationCenter.default.post(name: name, object: nil)
+                    NotificationCenter.default.post(name: name, object: nil)
         let movieName = makeMovieName("Witcher")
-        SelectionDelegate.didTapChoice(name: movieName)
+                    selectionDelegate?.didTapChoice(name: movieName)
         dismiss(animated: true, completion: nil)
     }
 }
