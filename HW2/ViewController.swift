@@ -8,20 +8,20 @@
 import UIKit
 
 
-//notification nameleri hazırlık
-let lightNotificationKey = "lightSide"
-let darkNotificationKey = "darkSide"
+
+
 
 
 class ViewController: UIViewController {
+    
 
     @IBOutlet weak private var chooseButton: UIButton!
     @IBOutlet weak private var mainImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
     
     // notification namlerini atama
-    let light = Notification.Name(rawValue: lightNotificationKey)
-    let dark = Notification.Name(rawValue: darkNotificationKey)
+    let light = Notification.Name(rawValue: nameKeys.lightNotificationKey.rawValue)
+    let dark = Notification.Name(rawValue: nameKeys.darkNotificationKey.rawValue)
 
     
     deinit {

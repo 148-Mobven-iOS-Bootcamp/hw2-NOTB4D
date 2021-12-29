@@ -14,6 +14,7 @@
 		B8924B632774FE2C00CC0AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8924B622774FE2C00CC0AF1 /* Assets.xcassets */; };
 		B8924B662774FE2C00CC0AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8924B642774FE2C00CC0AF1 /* LaunchScreen.storyboard */; };
 		B8924B6E277501F100CC0AF1 /* SelectionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8924B6D277501F100CC0AF1 /* SelectionScreenViewController.swift */; };
+		B8924B90277CCA0F00CC0AF1 /* NameKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8924B8F277CCA0F00CC0AF1 /* NameKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B8924B652774FE2C00CC0AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8924B672774FE2C00CC0AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8924B6D277501F100CC0AF1 /* SelectionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionScreenViewController.swift; sourceTree = "<group>"; };
+		B8924B8F277CCA0F00CC0AF1 /* NameKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B8924B622774FE2C00CC0AF1 /* Assets.xcassets */,
 				B8924B642774FE2C00CC0AF1 /* LaunchScreen.storyboard */,
 				B8924B672774FE2C00CC0AF1 /* Info.plist */,
+				B8924B8F277CCA0F00CC0AF1 /* NameKeys.swift */,
 			);
 			path = HW2;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				B8924B5E2774FE2A00CC0AF1 /* ViewController.swift in Sources */,
 				B8924B5A2774FE2A00CC0AF1 /* AppDelegate.swift in Sources */,
 				B8924B6E277501F100CC0AF1 /* SelectionScreenViewController.swift in Sources */,
+				B8924B90277CCA0F00CC0AF1 /* NameKeys.swift in Sources */,
 				B8924B5C2774FE2A00CC0AF1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,7 @@ class SelectionScreenViewController: UIViewController{
         super.viewDidLoad()
     }
     @IBAction func duneButtonTapped(_ sender: UIButton) {
-        let name = Notification.Name(rawValue: darkNotificationKey)
+        let name = Notification.Name(rawValue:  nameKeys.darkNotificationKey.rawValue)
                     NotificationCenter.default.post(name: name, object: nil)
         let movieName = makeMovieName("Dune")
                     selectionDelegate?.didTapChoice(name: movieName)
@@ -31,7 +31,7 @@ class SelectionScreenViewController: UIViewController{
     }
 
     @IBAction func witcherButtonTapped(_ sender: UIButton) {
-        let name = Notification.Name(rawValue: lightNotificationKey)
+        let name = Notification.Name(rawValue: nameKeys.lightNotificationKey.rawValue)
                     NotificationCenter.default.post(name: name, object: nil)
         let movieName = makeMovieName("Witcher")
                     selectionDelegate?.didTapChoice(name: movieName)
