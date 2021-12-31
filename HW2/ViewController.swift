@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak private var chooseButton: UIButton!
     @IBOutlet weak private var mainImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak private var directorName: UILabel!
     
     // notification namlerini atama
     let light = Notification.Name(rawValue: nameKeys.lightNotificationKey.rawValue)
@@ -40,6 +41,11 @@ class ViewController: UIViewController {
         SelectionScreenViewController
         // delegate ile filmim adını alıp Label'a yazdırıyoruz
         selectionVC.selectionDelegate = self
+        // closure dan gelen verileri Label a basıyoruz
+        selectionVC.directorName = { director in
+            self.directorName.text = director["director"] as? String
+        }
+
         present(selectionVC, animated: true, completion: nil)
     }
     
